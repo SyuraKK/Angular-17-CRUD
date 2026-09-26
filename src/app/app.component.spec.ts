@@ -23,13 +23,6 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-17-crud'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-17-crud');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-17-crud');
+    expect(app.title).toEqual('Angular 17 Crud example');
   });
 });

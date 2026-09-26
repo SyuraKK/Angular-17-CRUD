@@ -39,18 +39,6 @@
         />
       </div>
     </form>
-
-    @if (currentTutorial.published) {
-    <button class="badge badge-primary mr-2"
-      (click)="updatePublished(false)" >
-      UnPublish
-    </button>
-    } @else {
-    <button class="badge badge-primary mr-2" (click)="updatePublished(true)">
-      Publish
-    </button>
-    }
-
     <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
       Delete
     </button>

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideHttpClient } from '@angular/common/http';
 import { TutorialDetailsComponent } from './tutorial-details.component';
+import { ActivatedRoute } from '@angular/router';
 
 describe('TutorialDetailsComponent', () => {
   let component: TutorialDetailsComponent;
@@ -8,7 +9,20 @@ describe('TutorialDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TutorialDetailsComponent]
+      declarations: [TutorialDetailsComponent],
+      providers: [
+        provideHttpClient(),
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              params: {
+                id: '1'
+              }
+            }
+          }
+        }
+      ]
     })
     .compileComponents();
     

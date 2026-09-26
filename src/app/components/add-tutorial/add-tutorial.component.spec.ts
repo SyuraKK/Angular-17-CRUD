@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideHttpClient } from '@angular/common/http';
 import { AddTutorialComponent } from './add-tutorial.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AddTutorialComponent', () => {
   let component: AddTutorialComponent;
@@ -8,7 +9,13 @@ describe('AddTutorialComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddTutorialComponent]
+      declarations: [AddTutorialComponent],
+      providers: [
+        provideHttpClient()
+      ],
+      imports: [
+        FormsModule
+      ]
     })
     .compileComponents();
     
