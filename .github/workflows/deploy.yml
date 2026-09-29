@@ -29,7 +29,7 @@ jobs:
         run: npm test -- --watch=false --browsers=ChromeHeadless
 
       - name: Build Angular app
-        run: npm run build
+        run: npm run build -- --base-href /Angular-17-CRUD/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
